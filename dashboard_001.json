@@ -1,0 +1,428 @@
+{
+	"version": 1,
+	"allow_edit": true,
+	"plugins": [],
+	"panes": [
+		{
+			"title": "Updated",
+			"width": 1,
+			"row": {
+				"3": 1,
+				"5": 1,
+				"6": 1
+			},
+			"col": {
+				"3": 2,
+				"5": 2,
+				"6": 3
+			},
+			"col_width": 1,
+			"widgets": [
+				{
+					"type": "text_widget",
+					"settings": {
+						"title": "",
+						"size": "regular",
+						"value": "datasources[\"Reloj\"][\"date_string_value\"]",
+						"animate": true
+					}
+				},
+				{
+					"type": "text_widget",
+					"settings": {
+						"size": "regular",
+						"value": "datasources[\"Reloj\"][\"time_string_value\"]",
+						"animate": true
+					}
+				}
+			]
+		},
+		{
+			"title": "Driver",
+			"width": 1,
+			"row": {
+				"3": 1,
+				"5": 1,
+				"6": 1
+			},
+			"col": {
+				"3": 1,
+				"5": 1,
+				"6": 2
+			},
+			"col_width": 1,
+			"widgets": [
+				{
+					"type": "text_widget",
+					"settings": {
+						"title": "",
+						"size": "regular",
+						"value": "Sebastien Ogier",
+						"sparkline": false,
+						"animate": true
+					}
+				},
+				{
+					"type": "picture",
+					"settings": {
+						"src": "http://image1.redbull.com/rbcom/010/2013-05-07/1331589122413_1/0012/0/0/0/2832/2831/1500/1/s%C3%A9bastien-ogier-successeur-de-s%C3%A9bastien-loeb.jpg",
+						"refresh": 10000
+					}
+				}
+			]
+		},
+		{
+			"title": "Radio UHF information",
+			"width": 1,
+			"row": {
+				"3": 1,
+				"5": 1,
+				"6": 1
+			},
+			"col": {
+				"3": 3,
+				"5": 3,
+				"6": 4
+			},
+			"col_width": 3,
+			"widgets": [
+				{
+					"type": "sparkline",
+					"settings": {
+						"title": "RSSI",
+						"value": [
+							"datasources[\"FIA API\"][\"response\"][\"rssi\"]"
+						]
+					}
+				}
+			]
+		},
+		{
+			"title": "GPS information",
+			"width": 1,
+			"row": {
+				"5": 7,
+				"6": 7
+			},
+			"col": {
+				"5": 3,
+				"6": 4
+			},
+			"col_width": 3,
+			"widgets": [
+				{
+					"type": "sparkline",
+					"settings": {
+						"title": "Satellites",
+						"value": [
+							"datasources[\"FIA API\"][\"response\"][\"sats\"]"
+						],
+						"include_legend": true,
+						"legend": "sats"
+					}
+				}
+			]
+		},
+		{
+			"title": "Position",
+			"width": 1,
+			"row": {
+				"5": 24,
+				"7": 24
+			},
+			"col": {
+				"5": 3,
+				"7": 4
+			},
+			"col_width": 1,
+			"widgets": [
+				{
+					"type": "text_widget",
+					"settings": {
+						"title": "Meters from the previous position",
+						"size": "regular",
+						"value": "datasources[\"FIA API\"][\"response\"][\"distance\"]",
+						"animate": true
+					}
+				}
+			]
+		},
+		{
+			"title": "Satellites",
+			"width": 1,
+			"row": {
+				"5": 14,
+				"7": 14
+			},
+			"col": {
+				"5": 5,
+				"7": 5
+			},
+			"col_width": 1,
+			"widgets": [
+				{
+					"type": "text_widget",
+					"settings": {
+						"size": "regular",
+						"value": "datasources[\"FIA API\"][\"response\"][\"sats\"]",
+						"animate": true
+					}
+				},
+				{
+					"type": "gauge",
+					"settings": {
+						"value": "datasources[\"FIA API\"][\"response\"][\"sats\"]",
+						"units": "Sats",
+						"min_value": 0,
+						"max_value": "14"
+					}
+				}
+			]
+		},
+		{
+			"title": "Last position",
+			"width": 1,
+			"row": {
+				"5": 7,
+				"6": 7,
+				"7": 7
+			},
+			"col": {
+				"5": 2,
+				"6": 3,
+				"7": 3
+			},
+			"col_width": 1,
+			"widgets": [
+				{
+					"type": "text_widget",
+					"settings": {
+						"title": "",
+						"size": "regular",
+						"value": "datasources[\"FIA API\"][\"response\"][\"posDate\"]",
+						"animate": true
+					}
+				}
+			]
+		},
+		{
+			"title": "Speed",
+			"width": 1,
+			"row": {
+				"5": 11,
+				"6": 11,
+				"7": 11
+			},
+			"col": {
+				"5": 2,
+				"6": 3,
+				"7": 2
+			},
+			"col_width": 1,
+			"widgets": [
+				{
+					"type": "gauge",
+					"settings": {
+						"value": "datasources[\"FIA API\"][\"response\"][\"speed\"]",
+						"min_value": 0,
+						"max_value": "150"
+					}
+				}
+			]
+		},
+		{
+			"title": "Heading",
+			"width": 1,
+			"row": {
+				"5": 19,
+				"6": 14,
+				"7": 13
+			},
+			"col": {
+				"5": 2,
+				"6": 6,
+				"7": 3
+			},
+			"col_width": 1,
+			"widgets": [
+				{
+					"type": "pointer",
+					"settings": {
+						"direction": "datasources[\"FIA API\"][\"response\"][\"heading\"]",
+						"value_text": "datasources[\"FIA API\"][\"response\"][\"heading\"]",
+						"units": "Degrees º"
+					}
+				}
+			]
+		},
+		{
+			"title": "RSSI",
+			"width": 1,
+			"row": {
+				"5": 14,
+				"7": 14
+			},
+			"col": {
+				"5": 4,
+				"7": 3
+			},
+			"col_width": 1,
+			"widgets": [
+				{
+					"type": "text_widget",
+					"settings": {
+						"size": "regular",
+						"value": "datasources[\"api_local\"][\"response\"][\"rssi\"]",
+						"animate": true
+					}
+				},
+				{
+					"type": "gauge",
+					"settings": {
+						"value": "datasources[\"FIA API\"][\"response\"][\"rssi\"]",
+						"units": "dB",
+						"min_value": "50",
+						"max_value": "120"
+					}
+				}
+			]
+		},
+		{
+			"title": "Car 002",
+			"width": 1,
+			"row": {
+				"5": 13,
+				"6": 13,
+				"7": 15
+			},
+			"col": {
+				"5": 1,
+				"6": 2,
+				"7": 1
+			},
+			"col_width": 1,
+			"widgets": [
+				{
+					"type": "picture",
+					"settings": {
+						"src": "http://img.thesun.co.uk/aidemitlum/archive/01895/car_1895103a.jpg",
+						"refresh": 1000
+					}
+				}
+			]
+		},
+		{
+			"title": "Altitude",
+			"width": 1,
+			"row": {
+				"5": 29,
+				"6": 19,
+				"7": 19
+			},
+			"col": {
+				"5": 2,
+				"6": 3,
+				"7": 2
+			},
+			"col_width": 1,
+			"widgets": [
+				{
+					"type": "sparkline",
+					"settings": {
+						"title": "Meters over sea",
+						"value": [
+							"datasources[\"FIA API\"][\"response\"][\"altitude\"]"
+						]
+					}
+				}
+			]
+		},
+		{
+			"title": "Location",
+			"width": 1,
+			"row": {
+				"5": 14,
+				"6": 14,
+				"7": 25
+			},
+			"col": {
+				"5": 3,
+				"6": 4,
+				"7": 2
+			},
+			"col_width": 1,
+			"widgets": [
+				{
+					"type": "google_map",
+					"settings": {
+						"lat": "datasources[\"FIA API\"][\"response\"][\"latitude\"]",
+						"lon": "datasources[\"FIA API\"][\"response\"][\"longitude\"]"
+					}
+				}
+			]
+		},
+		{
+			"title": "Battery",
+			"width": 1,
+			"row": {
+				"5": 23,
+				"6": 23,
+				"7": 25
+			},
+			"col": {
+				"5": 1,
+				"6": 2,
+				"7": 1
+			},
+			"col_width": 1,
+			"widgets": [
+				{
+					"type": "text_widget",
+					"settings": {
+						"title": "",
+						"size": "regular",
+						"value": "datasources[\"FIA API\"][\"response\"][\"battery\"]",
+						"animate": true,
+						"units": "%"
+					}
+				},
+				{
+					"type": "gauge",
+					"settings": {
+						"value": "datasources[\"api_local\"][\"response\"][\"battery\"]",
+						"units": "v",
+						"min_value": 0,
+						"max_value": 100
+					}
+				}
+			]
+		}
+	],
+	"datasources": [
+		{
+			"name": "Reloj",
+			"type": "clock",
+			"settings": {
+				"refresh": 5
+			}
+		},
+		{
+			"name": "FIA API",
+			"type": "JSON",
+			"settings": {
+				"url": "http://mykyros.es:3000/api/tracking",
+				"use_thingproxy": true,
+				"refresh": 5,
+				"method": "POST",
+				"body": "license=001",
+				"headers": [
+					{
+						"name": "X-Access-Token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1MjY5ODI1MDA1ODksImlzcyI6InN1bW8iLCJyb2xlIjoiYWRtaW5pc3RyYXRvciJ9.CnX6I1puC-H-0AluXge8X4vVlUOfv8x-Nh6VwzxO-n8"
+					}
+				]
+			}
+		}
+	],
+	"columns": 5
+}
